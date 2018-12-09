@@ -1,0 +1,51 @@
+banner-1(scheme = __default)
+    .banner-1
+        position: absolute
+        white-space: nowrap
+        pointer-events: none
+        transform: rotate(-45deg)
+        bottom: rem(22px)
+        right: -(rem(82px))
+        z-index: 1
+        +min(1)
+            bottom: rem(42px)
+            right: -(rem(62px))
+        a
+            display: flex
+            align-items: center
+            justify-content: center
+            margin: 0
+            width: rem(275px)
+            min-height: rem(54px)
+            color: scheme.default
+            text-align: center
+            text-decoration: none
+            font-size: 1rem
+            font-weight: 600
+            pointer-events: auto
+            border: 1px solid scheme.default
+            background: scheme.background
+            &:hover
+                color: scheme.background
+                background: scheme.default
+            &.icon
+                &:hover
+                    svg
+                        size(rem(24px))
+                        position: static
+                        bottom: 0
+                    span
+                        width: 0
+                        height: 0
+                        opacity: 0
+                        position: absolute
+                        bottom: -100px
+                span
+                    transition: all 250ms
+                svg
+                    width: 0
+                    height: 0
+                    fill: _100
+                    position: absolute
+                    transition: all 250ms
+        { block }
